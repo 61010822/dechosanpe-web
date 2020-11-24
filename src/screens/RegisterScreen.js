@@ -97,10 +97,10 @@ export default function RegisterScreen () {
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Row justify="center">
-        <Col >
+        <Col style={{  padding: '20px' }} xs={24} md={12}>
             <Image width={400} preview={false} src={require('../assets/img/logo.png').default} />
             <Title level={3}>Register</Title>
-            <Content style={{ textAlign: 'center' }}>
+            <Content style={{ textAlign: 'cen?":ter' }}>
               <Space direction="vertical" style={{ width: '70%'}}>
                 <Form form={form}>
                   <Form.Item name="email" validateStatus={emailError.error} help={emailError.msg}>

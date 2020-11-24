@@ -110,9 +110,9 @@ export default function DetailScreen() {
         >
           <Title level={4}>{cosmetics[id].name}</Title>
           <Paragraph>{cosmetics[id].detail}</Paragraph>
-          <Title level={5}>Price: {cosmetics[id].price}</Title>
+          <Title level={5}>PRICE: {cosmetics[id].price}</Title>
           <Divider />
-          <Title level={4}>Shade</Title>
+          <Title level={4}>SHADE</Title>
           <Row glutter={5}>
             {cosmetics[id].shade &&
               cosmetics[id].shade.map((s) => {
