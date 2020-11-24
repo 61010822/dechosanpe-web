@@ -1,18 +1,18 @@
 const CATEGORIES = {
   1: {
-    name: 'lip',
+    name: 'LIP',
     icon: require('../assets/category/lip.png')
   },
   2: {
-    name: 'eye',
+    name: 'EYESHADOW',
     icon: require('../assets/category/eye.png')
   },
   3: {
-    name: 'blush',
+    name: 'BLUSH',
     icon: require('../assets/category/blush.png')
   },
   4: {
-    name: 'foundation',
+    name: 'FOUNDATION',
     icon: require('../assets/category/foundation.png')
   }
 }
