@@ -81,7 +81,7 @@ export default function HomeScreen () {
 
   return (
     <>
-      <Carousel>
+      <Carousel style= {{margin:'20px'}}>
         <div>
           <h3 style={contentStyle}>1</h3>
         </div>
