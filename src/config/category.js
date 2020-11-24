@@ -1,6 +1,6 @@
 const CATEGORIES = {
   1: {
-    name: 'LIP',
+    name: 'LIPSTICK',
     icon: require('../assets/category/lip.png')
   },
   2: {
@@ -8,7 +8,7 @@ const CATEGORIES = {
     icon: require('../assets/category/eye.png')
   },
   3: {
-    name: 'BLUSH',
+    name: 'BLUSHON',
     icon: require('../assets/category/blush.png')
   },
   4: {
