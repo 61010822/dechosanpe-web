@@ -1,6 +1,6 @@
 .cosmetic-thumbnails {
   width: 100%;
-  height: 150px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,7 +9,7 @@
 .cosmetic-thumbnails img {
   width: auto;
   height: auto;
-  max-height: 150px;
+  max-height: 250px;
 }
 
 .cosmetic-detail-thumbnail img {

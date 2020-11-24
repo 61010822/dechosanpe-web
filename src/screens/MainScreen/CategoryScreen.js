@@ -1,43 +1,38 @@
 import '../../assets/css/category.css'
-import React, { useState } from 'react'
+
+import firebase from 'firebase/app'
+import 'firebase/firestore'
+
+import { CATEGORIES } from '../../config/category'
+
+import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Row, Typography, Image, Col, Button } from 'antd'
+
 const { Title, Paragraph } = Typography
 
 export default function CategoryScreen () {
   const { categoryid } = useParams()
-  const [categories, setCategories] = useState({
-    1: {
-      name: 'lip',
-      icon: require('../../assets/category/lip.png')
-    },
-    2: {
-      name: 'eye',
-      icon: require('../../assets/category/eye.png')
-    },
-    3: {
-      name: 'skin care',
-      icon: require('../../assets/category/skincare.png')
-    }
-  })
-  const [cosmetics, setCosmetics] = useState({
-    1: {
-      name: 'lancome',
-      detail: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore`,
-      image: require('../../assets/category/lip/lancome.png'),
-      category: ['1'],
-      price: 1800
-    },
-    2: {
-      name: 'nars',
-      detail: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore`,
-      image: require('../../assets/category/lip/nars.png'),
-      category: ['1'],
-      price: 1100
-    }
-  })
+  const [categories, setCategories] = useState(CATEGORIES)
+  const [cosmetics, setCosmetics] = useState({})
+
+  useEffect(() => {
+    const cosmeticstmp = {}
+    const db = firebase.firestore()
+    const ref = db.collection('cosmetics')
+
+    // turn on listener when infomation changes change states
+    const unsub = ref.onSnapshot(cosmeticDocs => {
+      
+      cosmeticDocs.docChanges().forEach((c) => {
+          cosmeticstmp[c.doc.id] = c.doc.data()
+      })
+      setCosmetics(prevState => ({
+        ...cosmeticstmp
+      }))
+    })
+    return () => { unsub && unsub() }
+  }, [])
 
   return (
     <>
@@ -47,13 +42,14 @@ export default function CategoryScreen () {
         </Col>
         {
           Object.keys(cosmetics).filter(cosid => {
+            if (!cosmetics[cosid].category) return false
             return cosmetics[cosid].category.indexOf(categoryid) !== -1
           }).map(c => {
             return (
               <Col key={c} xs={12} md={6}>
                 <div className="cosmetic-items">
                   <div className="cosmetic-thumbnails">
-                    <Image src={cosmetics[c].image.default}/>
+                    <Image src={cosmetics[c].image}/>
                   </div>
                   <Title level={5}>{cosmetics[c].name}</Title>
                   <Paragraph>{cosmetics[c].detail}</Paragraph>
