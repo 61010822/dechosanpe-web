@@ -101,7 +101,7 @@ const RootRouter = () => {
             {/* Screen Header */}
             <Title
               level={5}
-              style={{ whiteSpace: "nowrap", lineHeight: "normal" ,fontSize:"30px"}}
+              style={{ whiteSpace: "nowrap", lineHeight: "normal" ,fontSize:"20px"}}
             >
               DECHOSANPÉ
             </Title>
