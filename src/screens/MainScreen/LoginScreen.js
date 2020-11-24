@@ -44,7 +44,8 @@ export default function LoginScreen () {
   if (auth) return <Redirect to="/" />
 
   return (
-    <Layout style={{ minHeight: '100vh' }}>
+    <div style={{height: '100vh',display: 'flex',justifyContent:'center',alignItems:'center',background:'#f0f2f5'}}>
+    <Layout >
       <Row justify="center">
         <Col style={{ background: 'white', padding: '20px' }} xs={24} md={12}>
             <Image width={400} preview={false} src={require('../assets/img/logo.png').default} />
@@ -67,5 +68,6 @@ export default function LoginScreen () {
         </Col>
       </Row>
     </Layout>
+    </div>
   )
 }
