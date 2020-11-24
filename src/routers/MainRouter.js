@@ -89,7 +89,7 @@ const RootRouter = () => {
             >
               <Link to="/">
                 <HomeOutlined
-                  style={{ marginRight: "10px", fontSize: "20px", float: "left" ,color: "black"}}
+                  style={{ marginRight: "25px",marginLeft:"25px", fontSize: "20px", float: "left" ,color: "black"}}
                 />
               </Link>
               <Link to="/ranking">
@@ -101,7 +101,7 @@ const RootRouter = () => {
             {/* Screen Header */}
             <Title
               level={5}
-              style={{ whiteSpace: "nowrap", lineHeight: "normal" }}
+              style={{ whiteSpace: "nowrap", lineHeight: "normal" ,fontSize:"30px"}}
             >
               DECHOSANPÉ
             </Title>
@@ -113,7 +113,7 @@ const RootRouter = () => {
             }}>
               <Popover placement="bottomRight" content={content} trigger="click">
                 <UserOutlined
-                  style={{ fontSize: "20px" }}
+                  style={{ marginRight:"25px",fontSize: "20px" }}
                 />
               </Popover>
             </div>
