@@ -98,7 +98,7 @@ export default function HomeScreen () {
         <Image   src={require('./../../assets/img/wallpaper4.jpg').default} />
         </div>
       </Carousel>
-      <Divider orientation="center">TRENDINGT</Divider>
+      <Divider orientation="center">TRENDING</Divider>
       <div style={{ padding: `0 ${chevronWidth}px` }}>
         <ItemsCarousel
           requestToChangeActive={setActiveItemIndex}
