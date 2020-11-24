@@ -77,6 +77,7 @@ export default function RankingScreen () {
                   <Image width={150} src={cosmetics[r].image}/>
                   <div style={{ display: 'flex', marginLeft: '40px', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center' }}>
                     <Title level={4}>{cosmetics[r].name}</Title>
+                    <Title level={5}>Price: {cosmetics[r].price}</Title>
                     <Rate disabled value={calculateAverageStar(cosmetics[r].rating)} />
                   </div>
                 </div>
