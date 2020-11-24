@@ -47,11 +47,11 @@ export default function LoginScreen () {
     <div style={{height: '100vh',display: 'flex',justifyContent:'center',alignItems:'center',background:'#f0f2f5'}}>
     <Layout >
       <Row justify="center">
-        <Col style={{background: 'white', padding: '20px'}} xs={24} md={12}>
-            <Image width={400} preview={false} src={require('../assets/img/logo.png').default} />
+        <Col style={{background:'#f0f2f5', padding: '20px'}} xs={24} md={12}>
+            <Image width={400}  preview={false} src={require('../assets/img/logo.png').default} />
             <Paragraph>Need an account ? <Link to="/register">Register</Link></Paragraph>
             <Content style={{ textAlign: 'center' }}>
-              <Space direction="vertical" style={{ width: '70%'}}>
+              <Space direction="vertical" style={{ width: '70%',}}>
                 <Form form={form} layout="vertical">
                   <Form.Item name="email" label="E-Mail : ">
                     <Input placeholder="email" />

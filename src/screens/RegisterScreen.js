@@ -97,7 +97,7 @@ export default function RegisterScreen () {
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Row justify="center">
-        <Col style={{ background: 'white', padding: '20px' }} xs={24} md={12}>
+        <Col >
             <Image width={400} preview={false} src={require('../assets/img/logo.png').default} />
             <Title level={3}>Register</Title>
             <Content style={{ textAlign: 'center' }}>
