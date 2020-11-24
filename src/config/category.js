@@ -10,6 +10,10 @@ const CATEGORIES = {
   3: {
     name: 'skin care',
     icon: require('../assets/category/skincare.png')
+  },
+  4: {
+    name: 'foundation',
+    icon: require('../assets/category/foundation.png')
   }
 }
 
