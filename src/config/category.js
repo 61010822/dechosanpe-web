@@ -8,8 +8,8 @@ const CATEGORIES = {
     icon: require('../assets/category/eye.png')
   },
   3: {
-    name: 'skin care',
-    icon: require('../assets/category/skincare.png')
+    name: 'blush',
+    icon: require('../assets/category/blush.png')
   },
   4: {
     name: 'foundation',

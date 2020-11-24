@@ -103,7 +103,7 @@ const RootRouter = () => {
               level={5}
               style={{ whiteSpace: "nowrap", lineHeight: "normal" }}
             >
-              DECHOSONPE
+              DECHOSANPE
             </Title>
           </HeaderSection>
           <HeaderSection>
@@ -128,7 +128,7 @@ const RootRouter = () => {
           </Switch>
         </Content>
         <Footer>
-          {"Copyright © "} DECHOSONPE {new Date().getFullYear()}
+          {"Copyright © "} DECHOSANPE {new Date().getFullYear()}
           {"."}
         </Footer>
       </Layout>
