@@ -89,11 +89,11 @@ const RootRouter = () => {
             >
               <Link to="/">
                 <HomeOutlined
-                  style={{ marginRight: "10px", fontSize: "20px", float: "left" }}
+                  style={{ marginRight: "10px", fontSize: "20px", float: "left" ,color: "black"}}
                 />
               </Link>
               <Link to="/ranking">
-                <HeartOutlined style={{ fontSize: "20px", float: "left" }} />
+                <HeartOutlined style={{ fontSize: "20px", float: "left",color:"black" }} />
               </Link>
             </div>
           </HeaderSection>
@@ -103,7 +103,7 @@ const RootRouter = () => {
               level={5}
               style={{ whiteSpace: "nowrap", lineHeight: "normal" }}
             >
-              DECHOSANPE
+              DECHOSANPÉ
             </Title>
           </HeaderSection>
           <HeaderSection>
@@ -128,7 +128,7 @@ const RootRouter = () => {
           </Switch>
         </Content>
         <Footer>
-          {"Copyright © "} DECHOSANPE {new Date().getFullYear()}
+          {"Copyright © "} DECHOSANPÉ {new Date().getFullYear()}
           {"."}
         </Footer>
       </Layout>
