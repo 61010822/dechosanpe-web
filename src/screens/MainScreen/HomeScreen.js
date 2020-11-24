@@ -98,7 +98,7 @@ export default function HomeScreen () {
         <Image   src={require('./../../assets/img/wallpaper4.jpg').default} />
         </div>
       </Carousel>
-      <Divider orientation="center">Trending</Divider>
+      <Divider orientation="center">TRENDINGT</Divider>
       <div style={{ padding: `0 ${chevronWidth}px` }}>
         <ItemsCarousel
           requestToChangeActive={setActiveItemIndex}
@@ -124,7 +124,7 @@ export default function HomeScreen () {
           }
         </ItemsCarousel>
       </div>
-      <Divider orientation="center">Category Vote</Divider>
+      <Divider orientation="center">CATEGORY VOTE</Divider>
       <Row justify="center" gutter={[{ xs: 10, sm: 16, md: 24, lg: 32 }, 16]}>
         {
           Object.keys(categories).map(g => {

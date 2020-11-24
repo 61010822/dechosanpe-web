@@ -70,7 +70,7 @@ const RootRouter = () => {
     // loading before check status
     return (
       <Layout>
-        <Title level={5}>Loading</Title>
+        <Title level={5}>LOADING</Title>
       </Layout>
     )
   } else if (auth === false) return <Redirect to="/login" /> // redirect if user is not loged in
