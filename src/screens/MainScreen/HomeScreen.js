@@ -83,16 +83,19 @@ export default function HomeScreen () {
     <>
       <Carousel style= {{margin:'20px'}}>
         <div>
-        <Image src={require('./../../assets/img/wallpaper1.jpg').default} />
+        <Image   src={require('./../../assets/img/wallpaper.jpg').default} />
         </div>
         <div>
-        <h3 style={contentStyle}>2</h3>
+        <Image   src={require('./../../assets/img/wallpaper1.jpg').default} />
         </div>
         <div>
-          <h3 style={contentStyle}>3</h3>
+        <Image   src={require('./../../assets/img/wallpaper2.jpg').default} />
         </div>
         <div>
-          <h3 style={contentStyle}>4</h3>
+        <Image   src={require('./../../assets/img/wallpaper3.jpg').default} />
+        </div>
+        <div>
+        <Image   src={require('./../../assets/img/wallpaper4.jpg').default} />
         </div>
       </Carousel>
       <Divider orientation="center">Trending</Divider>
