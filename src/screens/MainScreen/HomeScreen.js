@@ -82,7 +82,7 @@ export default function HomeScreen () {
   return (
     <>
       <Carousel style= {{margin:'20px'}}>
-        <div>
+        <div >
         <Image   src={require('./../../assets/img/wallpaper.jpg').default} />
         </div>
         <div>
