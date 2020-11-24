@@ -54,7 +54,7 @@ export default function CategoryScreen () {
                   <Title level={5}>{cosmetics[c].name}</Title>
                   <Paragraph>{cosmetics[c].detail}</Paragraph>
                   <Link to={`/cosmetic/${c}`}>
-                    <Button type="primary" block>
+                    <Button type="default" block>
                       More Detail
                     </Button>
                   </Link>

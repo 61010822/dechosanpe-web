@@ -59,7 +59,7 @@ export default function LoginScreen () {
                     <Input.Password placeholder="password" />
                   </Form.Item>
                 </Form>
-                <Button onClick={handleLogin} type="primary" block>
+                <Button onClick={handleLogin} type="default" block>
                   Sign In
                 </Button>
               </Space>

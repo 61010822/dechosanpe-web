@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Layout, Space, Row, Col, Typography, Image, Input, Button, Form, message } from 'antd'
 import { Redirect } from 'react-router-dom'
 
+
 import firebase from 'firebase/app'
 import 'firebase/auth'
 
@@ -112,7 +113,7 @@ export default function RegisterScreen () {
                     <Input.Password placeholder="Confirm" />
                   </Form.Item>
                 </Form>
-                <Button onClick={handleRegister} type="primary" block>
+                <Button onClick={handleRegister} type="default" block>
                   Sign In
                 </Button>
               </Space>

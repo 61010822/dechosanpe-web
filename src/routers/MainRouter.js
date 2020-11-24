@@ -60,7 +60,7 @@ const RootRouter = () => {
         } catch (error) {
           message.error(error.message)
         }
-      }} type="link" block>
+      }} type="default" block>
         LOG OUT
       </Button>
     </div>

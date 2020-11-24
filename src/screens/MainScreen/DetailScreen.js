@@ -125,7 +125,7 @@ export default function DetailScreen() {
           </Row>
           <Divider />
           <Popover placement="left" content={content} trigger="click">
-            <Button type="primary">MORE DETAIL</Button>
+            <Button type="default">MORE DETAIL</Button>
           </Popover>
           <Divider />
           <Title level={4}>RANKING</Title>
@@ -155,7 +155,7 @@ export default function DetailScreen() {
           {isRate ? (
             <>
               <Paragraph>Do you want to rate this product ?</Paragraph>
-              <Button onClick={handleRate} type="primary">
+              <Button onClick={handleRate} type="default">
                 Yes
               </Button>
               <Button
@@ -196,7 +196,7 @@ export default function DetailScreen() {
             bordered={false}
           />
           {
-            comment ? <Button onClick={handleComment} type="primary">Comment</Button>: null
+            comment ? <Button onClick={handleComment} type="default">Comment</Button>: null
           }
         </Col>
       </Row>
