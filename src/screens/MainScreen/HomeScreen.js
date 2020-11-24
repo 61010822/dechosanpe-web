@@ -18,7 +18,7 @@ export default function HomeScreen () {
   const [categories, setCategories] = useState(CATEGORIES)
   
   const contentStyle = {
-    height: '160px',
+    height: '500px',
     color: '#fff',
     lineHeight: '160px',
     textAlign: 'center',
@@ -83,10 +83,10 @@ export default function HomeScreen () {
     <>
       <Carousel style= {{margin:'20px'}}>
         <div>
-          <h3 style={contentStyle}>1</h3>
+        <Image src={require('./../../assets/img/wallpaper1.jpg').default} />
         </div>
         <div>
-          <h3 style={contentStyle}>2</h3>
+        <h3 style={contentStyle}>2</h3>
         </div>
         <div>
           <h3 style={contentStyle}>3</h3>
