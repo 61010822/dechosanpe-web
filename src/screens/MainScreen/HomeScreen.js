@@ -45,6 +45,7 @@ export default function HomeScreen () {
         </div>
       </Carousel>
       <Divider orientation="center">Trending</Divider>
+      <a target="_blank" rel="noopener noreferrer" href="http://your_url_here.html">Link</a>
       <Divider orientation="center">Category Vote</Divider>
       <Row justify="center" gutter={[{ xs: 10, sm: 16, md: 24, lg: 32 }, 16]}>
         {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, Space, Row, Col, Typography, Image, Input, Button } from 'antd'
+import { Layout, Space, Row, Col, Typography, Image, Input, Button, Form } from 'antd'
 import { Link } from 'react-router-dom'
 
 const { Paragraph, Title } = Typography
@@ -13,8 +13,14 @@ export default function LoginScreen () {
             <Paragraph>Need an account ? <Link to="/register">Register</Link></Paragraph>
             <Content style={{ textAlign: 'left' }}>
               <Space direction="vertical" style={{ width: '100%'}}>
-                E-Mail : <Input placeholder="email" />
-                Password : <Input.Password placeholder="password" />
+                <Form layout="vertical">
+                  <Form.Item label="E-Mail : ">
+                    <Input placeholder="email" />
+                  </Form.Item>
+                  <Form.Item label="Password : ">
+                    <Input.Password placeholder="password" />
+                  </Form.Item>
+                </Form>
                 <Button type="primary" block>
                   Sign In
                 </Button>

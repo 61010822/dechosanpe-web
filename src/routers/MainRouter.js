@@ -1,8 +1,11 @@
 import React from "react";
-import { Layout, Typography, Popover, Button } from "antd";
+import { Layout, Typography, Popover, Button, message } from "antd";
 import { Switch, Route, Redirect, Link } from "react-router-dom";
 import { HOME_ROUTE } from "./router";
 import { HomeOutlined, HeartOutlined, UserOutlined } from "@ant-design/icons";
+import firebase from 'firebase/app'
+import 'firebase/auth'
+
 const { Title } = Typography;
 
 const { Header, Footer, Content } = Layout;
@@ -34,7 +37,15 @@ const RootRouter = () => {
   const content = (
     <div>
       <p>USERNAME : ____</p>
-      <Button type="link" block>
+      <Button onClick={async () => {
+        const auth = firebase.auth()
+        try {
+          await auth.signOut()
+          message.success('sign out successful')
+        } catch (error) {
+          message.error(error.message)
+        }
+      }} type="link" block>
         LOG OUT
       </Button>
     </div>

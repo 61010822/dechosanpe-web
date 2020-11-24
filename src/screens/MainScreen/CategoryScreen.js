@@ -38,6 +38,7 @@ export default function CategoryScreen () {
       price: 1100
     }
   })
+
   return (
     <>
       <Row style={{ textAlign: 'left' }} gutter={[{ xs: 10, sm: 16, md: 24, lg: 32 }, 16]}>
