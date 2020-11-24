@@ -1,11 +1,11 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyAeoJP8dV--YFniOCqFxb7vXWNyavnSfNQ",
-    authDomain: "dechosanpe.firebaseapp.com",
-    databaseURL: "https://dechosanpe.firebaseio.com",
-    projectId: "dechosanpe",
-    storageBucket: "dechosanpe.appspot.com",
-    messagingSenderId: "852188774844",
-    appId: "1:852188774844:web:e28745418d9f16dea16bb9"
+  apiKey: "AIzaSyDnLgPG9TWGS1mBNxv2TIbiIhn3iRiTXQM",
+  authDomain: "dechosonpe.firebaseapp.com",
+  databaseURL: "https://dechosonpe.firebaseio.com",
+  projectId: "dechosonpe",
+  storageBucket: "dechosonpe.appspot.com",
+  messagingSenderId: "378156510745",
+  appId: "1:378156510745:web:fb12f310686a9f7ed34488"
 }
 
 export { firebaseConfig }

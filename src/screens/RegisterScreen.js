@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Layout, Space, Row, Col, Typography, Image, Input, Button, Form, message } from 'antd'
+import { Redirect } from 'react-router-dom'
 
 import firebase from 'firebase/app'
 import 'firebase/auth'
@@ -13,6 +14,18 @@ export default function RegisterScreen () {
   const [passwordError, setPasswordError] = useState({})
   const [confirmError, setConfirmError] = useState({})
   const auth = firebase.auth()
+  const [isAuth, setIsAuth] = useState(null)
+
+  useEffect(() => {
+    const unsub = firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        setIsAuth(true)
+      } else {
+        setIsAuth(false)
+      }
+    })
+    return () => { unsub() }
+  }, [])
 
   const _validateEmail = email => {
     if (typeof email === 'string') email = email.trim()
@@ -77,6 +90,8 @@ export default function RegisterScreen () {
       })
     }
   }
+
+  if (isAuth) return <Redirect to="/" />
 
   return (
     <Layout style={{ minHeight: '100vh' }}>

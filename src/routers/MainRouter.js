@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Layout, Typography, Popover, Button, message } from "antd";
 import { Switch, Route, Redirect, Link } from "react-router-dom";
 import { HOME_ROUTE } from "./router";
@@ -19,6 +19,21 @@ const HeaderSection = (props) => {
 };
 
 const RootRouter = () => {
+  const [auth, setAuth] = React.useState(null)
+  const [user, setUser] = React.useState({})
+
+  useEffect(() => {
+    const unsub = firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        setUser(user)
+        setAuth(true)
+      } else {
+        setAuth(false)
+      }
+    })
+    return () => { unsub() }
+  }, [])
+
   const styles = {
     header: {
       lineHeight: 0,
@@ -36,7 +51,7 @@ const RootRouter = () => {
   };
   const content = (
     <div>
-      <p>USERNAME : ____</p>
+      <p>USERNAME : {user.email}</p>
       <Button onClick={async () => {
         const auth = firebase.auth()
         try {
@@ -50,6 +65,17 @@ const RootRouter = () => {
       </Button>
     </div>
   )
+  
+  if (auth === null) {
+    // loading before check status
+    return (
+      <Layout>
+        <Title level={5}>Loading</Title>
+      </Layout>
+    )
+  } else if (auth === false) return <Redirect to="/login" /> // redirect if user is not loged in
+  
+
   return (
     <Layout style={styles.layout}>
       <Layout>
