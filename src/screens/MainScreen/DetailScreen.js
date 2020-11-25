@@ -110,7 +110,7 @@ export default function DetailScreen() {
         >
           <Title level={4}>{cosmetics[id].name}</Title>
           <Paragraph>{cosmetics[id].detail}</Paragraph>
-          <Title level={5}>PRICE: {cosmetics[id].price}</Title>
+          <Title level={5}>PRICE: {cosmetics[id].price} Bath</Title>
           <Divider />
           <Title level={4}>SHADE</Title>
           <Row glutter={5}>
