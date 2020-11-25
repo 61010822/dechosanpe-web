@@ -140,7 +140,8 @@ export default function HomeScreen () {
                       whiteSpace: 'nowrap',
                       marginLeft: '-100%',
                       marginRight: '-100%',
-                      textAlign: 'center'
+                      textAlign: 'center',
+                      fontSize: '14px'
                     }} level={5}>{categories[g].name}</Title>
                   </div>
                 </Link>
